@@ -13,29 +13,37 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Select Xcode Version
-        run: sudo xcode-select -switch /Applications/Xcode_15.4.app
+      - name: Check Environment & Xcode
+        run: |
+          xcodebuild -version
+          swift -version
 
-      - name: Build and Archive
+      - name: Compile iOS App
         run: |
           cd AegisSecurity-iOS
           xcodebuild \
             -project AegisSecurity.xcodeproj \
             -scheme AegisSecurity \
-            -sdk iphoneos \
             -configuration Release \
-            CODE_SIGNING_ALLOWED=NO \
-            CODE_SIGNING_REQUIRED=NO \
+            -sdk iphoneos \
+            -derivedDataPath build \
             CODE_SIGN_IDENTITY="" \
-            archive \
-            -archivePath build/AegisSecurity.xcarchive
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            build
 
-      - name: Package IPA
+      - name: Package into IPA
         run: |
           cd AegisSecurity-iOS
+          APP_PATH=$(find build -name "AegisSecurity.app" -type d | head -n 1)
+          echo "Found compiled app at: $APP_PATH"
+          if [ -z "$APP_PATH" ]; then
+            echo "Error: AegisSecurity.app not found!"
+            exit 1
+          fi
           mkdir -p Payload
-          cp -r build/AegisSecurity.xcarchive/Products/Applications/AegisSecurity.app Payload/
-          zip -r AegisSecurity.ipa Payload
+          cp -r "$APP_PATH" Payload/
+          zip -qr AegisSecurity.ipa Payload
           mkdir -p ../output
           mv AegisSecurity.ipa ../output/
 
