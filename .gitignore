@@ -1,0 +1,15 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/app/build
+captures
+.externalNativeBuild
+.cxx
+*.apk
+*.ipa
+/AegisSecurity-iOS/build
+/AegisSecurity-iOS/Payload
+/AegisSecurity-iOS/*.xcarchive

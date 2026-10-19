@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1001 /* AegisSecurityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2001 /* AegisSecurityApp.swift */; };
+		1002 /* JailbreakDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2002 /* JailbreakDetector.swift */; };
+		1003 /* AntiDebugDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003 /* AntiDebugDetector.swift */; };
+		1004 /* SecureEnclaveVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2004 /* SecureEnclaveVault.swift */; };
+		1005 /* NetworkSecurityInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005 /* NetworkSecurityInspector.swift */; };
+		1006 /* ScreenShieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006 /* ScreenShieldModifier.swift */; };
+		1007 /* CyberTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2007 /* CyberTheme.swift */; };
+		1008 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2008 /* DashboardView.swift */; };
+		1009 /* IntegrityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2009 /* IntegrityView.swift */; };
+		1010 /* NetworkHardeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2010 /* NetworkHardeningView.swift */; };
+		1011 /* SecureVaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011 /* SecureVaultView.swift */; };
+		1012 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2012 /* ContentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0001 /* AegisSecurity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AegisSecurity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2001 /* AegisSecurityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AegisSecurityApp.swift; sourceTree = "<group>"; };
+		2002 /* JailbreakDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JailbreakDetector.swift; sourceTree = "<group>"; };
+		2003 /* AntiDebugDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntiDebugDetector.swift; sourceTree = "<group>"; };
+		2004 /* SecureEnclaveVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureEnclaveVault.swift; sourceTree = "<group>"; };
+		2005 /* NetworkSecurityInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSecurityInspector.swift; sourceTree = "<group>"; };
+		2006 /* ScreenShieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShieldModifier.swift; sourceTree = "<group>"; };
+		2007 /* CyberTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyberTheme.swift; sourceTree = "<group>"; };
+		2008 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		2009 /* IntegrityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrityView.swift; sourceTree = "<group>"; };
+		2010 /* NetworkHardeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHardeningView.swift; sourceTree = "<group>"; };
+		2011 /* SecureVaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureVaultView.swift; sourceTree = "<group>"; };
+		2012 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4000 = {
+			isa = PBXGroup;
+			children = (
+				4001 /* AegisSecurity */,
+				4007 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4001 /* AegisSecurity */ = {
+			isa = PBXGroup;
+			children = (
+				4002 /* App */,
+				4003 /* Core */,
+				4004 /* UI */,
+				4005 /* Resources */,
+			);
+			path = AegisSecurity;
+			sourceTree = "<group>";
+		};
+		4002 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2001 /* AegisSecurityApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4003 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2002 /* JailbreakDetector.swift */,
+				2003 /* AntiDebugDetector.swift */,
+				2004 /* SecureEnclaveVault.swift */,
+				2005 /* NetworkSecurityInspector.swift */,
+				2006 /* ScreenShieldModifier.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		4004 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2007 /* CyberTheme.swift */,
+				2008 /* DashboardView.swift */,
+				2009 /* IntegrityView.swift */,
+				2010 /* NetworkHardeningView.swift */,
+				2011 /* SecureVaultView.swift */,
+				2012 /* ContentView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4005 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2013 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4007 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0001 /* AegisSecurity.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5001 /* AegisSecurity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6001 /* Build configuration list for PBXNativeTarget "AegisSecurity" */;
+			buildPhases = (
+				7001 /* Sources */,
+				3001 /* Frameworks */,
+				8001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AegisSecurity;
+			productName = AegisSecurity;
+			productReference = 0001 /* AegisSecurity.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					5001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 6002 /* Build configuration list for PBXProject "AegisSecurity" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4000;
+			productRefGroup = 4007 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5001 /* AegisSecurity */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1001 /* AegisSecurityApp.swift in Sources */,
+				1002 /* JailbreakDetector.swift in Sources */,
+				1003 /* AntiDebugDetector.swift in Sources */,
+				1004 /* SecureEnclaveVault.swift in Sources */,
+				1005 /* NetworkSecurityInspector.swift in Sources */,
+				1006 /* ScreenShieldModifier.swift in Sources */,
+				1007 /* CyberTheme.swift in Sources */,
+				1008 /* DashboardView.swift in Sources */,
+				1009 /* IntegrityView.swift in Sources */,
+				1010 /* NetworkHardeningView.swift in Sources */,
+				1011 /* SecureVaultView.swift in Sources */,
+				1012 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6011 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6021 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = AegisSecurity/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aegis.security.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = AegisSecurity/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aegis.security.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6001 /* Build configuration list for PBXNativeTarget "AegisSecurity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6021 /* Debug */,
+				6022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6002 /* Build configuration list for PBXProject "AegisSecurity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6011 /* Debug */,
+				6012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 9001 /* Project object */;
+}

@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.AegisSecurity" parent="android:Theme.Material.NoActionBar">
+        <item name="android:statusBarColor">#0A0E1A</item>
+        <item name="android:navigationBarColor">#0A0E1A</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

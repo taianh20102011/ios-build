@@ -1,0 +1,46 @@
+name: Build iOS IPA
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-14
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Select Xcode Version
+        run: sudo xcode-select -switch /Applications/Xcode_15.4.app
+
+      - name: Build and Archive
+        run: |
+          cd AegisSecurity-iOS
+          xcodebuild \
+            -project AegisSecurity.xcodeproj \
+            -scheme AegisSecurity \
+            -sdk iphoneos \
+            -configuration Release \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            archive \
+            -archivePath build/AegisSecurity.xcarchive
+
+      - name: Package IPA
+        run: |
+          cd AegisSecurity-iOS
+          mkdir -p Payload
+          cp -r build/AegisSecurity.xcarchive/Products/Applications/AegisSecurity.app Payload/
+          zip -r AegisSecurity.ipa Payload
+          mkdir -p ../output
+          mv AegisSecurity.ipa ../output/
+
+      - name: Upload IPA Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AegisSecurity-iOS-IPA
+          path: output/AegisSecurity.ipa
