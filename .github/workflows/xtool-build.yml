@@ -1,0 +1,30 @@
+name: Build with xtool
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: xtool-build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  xtool-build:
+    runs-on: macos-14
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install xtool via Homebrew
+        run: |
+          brew tap xtool-org/tap
+          brew install xtool
+
+      - name: Verify xtool
+        run: |
+          xtool --version
+
+      - name: Build with xtool
+        run: |
+          cd AegisSecurity-iOS
+          xtool build --target AegisSecurity
