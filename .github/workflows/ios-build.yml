@@ -5,21 +5,25 @@ on:
     branches: [ main, master ]
   workflow_dispatch:
 
+# Automatically cancel any older queued or in-progress runs when a new push occurs
+concurrency:
+  group: build-ios-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
-    # macos-13 has massive capacity on GitHub, picking up instantly without queuing
-    runs-on: macos-13
+    runs-on: macos-14
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Select Xcode 15
+      - name: Check Environment & Xcode
         run: |
-          sudo xcode-select -switch /Applications/Xcode_15.2.app || true
           xcodebuild -version
+          swift -version
 
-      - name: Fast Compile iOS App
+      - name: Compile iOS App
         run: |
           cd AegisSecurity-iOS
           xcodebuild \
@@ -36,7 +40,7 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             build
 
-      - name: Fast Package into IPA
+      - name: Package into IPA
         run: |
           cd AegisSecurity-iOS
           APP_PATH=$(find build -name "AegisSecurity.app" -type d | head -n 1)
